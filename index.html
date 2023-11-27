@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form-3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background: linear-gradient(to right, #4776e6, #8e54e9);
+            font-size: 18px;
+        }
+        .parent{
+            height: 70vh;
+            width: 30vw;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: aqua;
+        }
+        h3{
+            background-color: black;
+            color: azure;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            height: 90%;
+            width: 80%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+        }
+        .child1{
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .child1x{
+            display: flex;
+            width: 100%;
+            align-items: end;
+            height: 100%;
+            justify-content: end;
+            margin-left: 20px;
+        }
+        .child11{
+            width: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            justify-content: center;
+        }
+        .child12{
+            width: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            justify-content: center;
+        }
+        .input1{
+            height: 40px;
+            width: 80%;
+            outline: none;
+            border: 2px solid gray;
+            margin-left: 20px;
+            font-size: 1.2rem;
+        }
+        .label1{ 
+            margin-left: 20px;
+        }
+        .child2{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .input2{
+            height: 40px;
+            width: 100%;
+            margin-left: 15px;
+            outline: none;
+            border: 2px solid gray;
+            font-size: 1.2rem;
+        }
+        .child3{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .input3{
+            height: 40px;
+            width: 100%;
+            margin-left: 40px;
+            outline: none;
+            border: 2px solid gray;
+            font-size: 1.2rem;
+        }
+        .child4{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .child41{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .input4{
+            height: 40px;
+            width: 30%;
+            margin-left: 40px;
+            outline: none;
+            border: 2px solid gray;
+            font-size: 1.2rem;
+        }
+        .input5{
+            height: 40px;
+            width: 100%;
+            margin-left: 20px;
+            outline: none;
+            border: 2px solid gray;
+            font-size: 1.5rem;
+        }
+        .child5{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        select{
+            height: 40px;
+            width: 100%;
+            margin-left: 30px;
+            outline: none;
+            border: 2px solid gray;
+        }
+        .child6{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .child61{
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+        }
+        button{
+            height: 40px;
+            width: 35%;
+            outline: none;
+            border: 1px red;
+            background-color: rgb(217, 33, 33);
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        label{
+            font-size: auto;
+        }
+        @media screen and (min-width:375px) and (max-width:800px) {
+            h3{
+                font-size: 10px;
+            }
+            .child1{
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+            }
+            label{
+                font-size: 10px;
+            }
+            .input1{
+                height: 30px;
+                width: 90px;
+                font-size: 1rem;
+            }
+            .child1x{
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+                margin-left: -20px;
+            }
+            .child2{
+                flex-direction: column;
+                align-items: start;
+            }
+            .input2{
+                height: 30px;
+                width: 80px;
+                font-size: 1rem;
+                margin-left: 0;
+            }
+            .child3{
+                flex-direction: column;
+                align-items: start;
+            }
+            .input3{
+                height: 30px;
+                width: 100%;
+                font-size: 10px;
+                margin-left: 0;
+            }
+            .child4{
+                flex-direction: column;
+                align-items: start;
+            }
+            .input4{
+                height: 20px;
+                width: 20px;
+                margin: 0;
+            }
+            .input5{
+                height: 20px;
+                width: 50px;
+                margin: 0  0 0 5px;
+            }
+            .child5{
+                flex-direction: column;
+                align-items: start;
+            }
+            select{
+                margin: 0;
+                height: 20px;
+                font-size: 10px;
+            }
+            button{
+                height: 20px;
+                font-size: 10px;
+                width: 50px;
+            }
+        }
+        @media screen and (min-width:801px) and (max-width:1000px) {
+            .parent{
+                align-items: center;
+            }
+            h3{
+                font-size: 16px;
+            }
+            label{
+                font-size: 14px;
+            }
+            .input1{
+                height: 30px;
+                width: 90%;
+            }
+            .input4{
+                height: 20px;
+                width: 30px;
+            } 
+            .input5{
+                height: 20px;
+                width: 80px;
+                margin-left: 10px;
+            }
+            button{
+                height: 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h3>EVENT REGISTRATION FORM</h3>
+        <form>
+            <div class="child1">
+                <label>Name</label>
+                <div class="child1x">
+                    <div class="child11">
+                        <input type="text" class="input1">
+                        <label class="label1">First Name</label>
+                    </div>
+                    <div class="child12">
+                        <input type="text" class="input1">
+                        <label class="label1">Last Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="child2">
+                <label>Company</label>
+                <input type="text" class="input2">
+            </div>
+            <div class="child3">
+                <label>Email</label>
+                <input type="email" placeholder="example@gmail.com" class="input3">
+            </div>
+            <div class="child4">
+                <label>Phone</label>
+                <div class="child41">
+                    <input type="text" class="input4">
+                    <input type="tel" class="input5">
+                </div>
+            </div>
+            <div class="child5">
+                <label>Subject</label>
+                <select>
+                    <option>Choose Option</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>Bootsatrap</option>
+                    <option>JavaScript</option>
+                </select>
+            </div>
+            <div class="child6">
+                <label>Are you an existing customer?</label>
+                <div class="child61">
+                    <div class="child611">
+                        <input type="radio" name="toggle" class="input6">
+                        <label>Yes</label>
+                    </div>
+                    <div class="child612">
+                        <input type="radio" name="toggle" class="input6">
+                        <label>No</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
